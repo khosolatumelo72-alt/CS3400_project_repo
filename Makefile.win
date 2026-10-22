@@ -1,0 +1,42 @@
+CPP      = g++.exe
+OBJ      = main.o Vehiclelist.o Vehicle.o Sorting.o Tree.o HashTable.o Graph.o MenuC.o Request.o RequestQueue.o RequestStack.o PriorityQueue.o RequestManager.o
+LINKOBJ  = $(OBJ)
+BIN      = CS3400_Campus_System.exe
+CXXFLAGS = -std=c++11 -Wall -Wextra -pedantic
+LIBS     =
+
+.PHONY: all clean
+all: $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c $< -o $@ $(CXXFLAGS)
+Vehiclelist.o: Vehiclelist.cpp
+	$(CPP) -c $< -o $@ $(CXXFLAGS)
+Vehicle.o: Vehicle.cpp
+	$(CPP) -c $< -o $@ $(CXXFLAGS)
+Sorting.o: Sorting.cpp
+	$(CPP) -c $< -o $@ $(CXXFLAGS)
+Tree.o: Tree.cpp
+	$(CPP) -c $< -o $@ $(CXXFLAGS)
+HashTable.o: HashTable.cpp
+	$(CPP) -c $< -o $@ $(CXXFLAGS)
+Graph.o: Graph.cpp
+	$(CPP) -c $< -o $@ $(CXXFLAGS)
+MenuC.o: MenuC.cpp
+	$(CPP) -c $< -o $@ $(CXXFLAGS)
+Request.o: Student\ B/Request.cpp
+	$(CPP) -c "Student B/Request.cpp" -o $@ $(CXXFLAGS)
+RequestQueue.o: Student\ B/RequestQueue.cpp
+	$(CPP) -c "Student B/RequestQueue.cpp" -o $@ $(CXXFLAGS)
+RequestStack.o: Student\ B/RequestStack.cpp
+	$(CPP) -c "Student B/RequestStack.cpp" -o $@ $(CXXFLAGS)
+PriorityQueue.o: Student\ B/PriorityQueue.cpp
+	$(CPP) -c "Student B/PriorityQueue.cpp" -o $@ $(CXXFLAGS)
+RequestManager.o: Student\ B/RequestManager.cpp
+	$(CPP) -c "Student B/RequestManager.cpp" -o $@ $(CXXFLAGS)
+
+clean:
+	cmd.exe /c del /q $(OBJ) $(BIN)

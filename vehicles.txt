@@ -1,0 +1,3 @@
+BUS01|A123||Bus|Route 1|40|Available
+AMB01|B456||Ambulance|None|4|Available
+BUS02|D012||Bus|Route 2|60|Available
